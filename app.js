@@ -20,19 +20,19 @@ function submitHandler(){
 
 function calculateProfitandLoss(initial , quantity , current){
     if (initial > current) {
-        var loss = (initial-current) * quantity;
+        var loss = (initial-current);
         var lossPercentage = (loss/initial) * 100;
 
-        showOutput( `loss is ${loss} and the loss percentage is ${lossPercentage}% `) ;
+        showOutput( `loss is ${loss} per stock and the loss percentage is ${lossPercentage}% `) ;
     }
     else if (current > initial) {
-        var profit = (current - initial) * quantity;
+        var profit = (current - initial) ;
         var profitPercentage = (profit/initial) * 100;
-        showOutput(`profit is ${profit} and the profit percentage is ${profitPercentage}% `)    
+        showOutput(`profit is ${profit} per stock and the profit percentage is ${profitPercentage}% `)    
     }
     else {
         showOutput(
-            "No pain No gain"
+            "No Profit  No Loss!"
         )
     }
 } 
